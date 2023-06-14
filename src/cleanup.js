@@ -1,7 +1,7 @@
-const core = require('@actions/core');
-const publicIp = require('public-ip');
+import * as core from "@actions/core";
+import publicIp from "public-ip";
 
-const config = require('./config');
+import * as config from "./config";
 
 async function run() {
   try {
