@@ -1,6 +1,6 @@
-const core = require('@actions/core');
-const AWS = require('aws-sdk/global');
-const EC2 = require('aws-sdk/clients/ec2');
+import * as core from "@actions/core";
+import AWS from "aws-sdk/global";
+import EC2 from "aws-sdk/clients/ec2";
 
 const region = core.getInput('aws-region', { required: true });
 const accessKeyId = core.getInput('aws-access-key-id', { required: true });
@@ -24,7 +24,7 @@ AWS.config.update({
 });
 const ec2 = new EC2();
 
-module.exports = {
+export {
   region,
   accessKeyId,
   secretAccessKey,
